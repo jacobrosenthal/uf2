@@ -13,6 +13,10 @@
 
 #define EP_SIZE 64
 
+#ifdef __linux__ 
+typedef u_int32_t uint32_t;
+#endif
+
 typedef struct {
     hid_device *dev;
     uint16_t size;
